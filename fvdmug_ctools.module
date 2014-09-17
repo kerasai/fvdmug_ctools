@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * FVDMUG CTools module code.
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function fvdmug_ctools_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools') {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * Possible values for day of the week.
+ */
+function fvdmug_ctools_dow_options() {
+  return array(
+    t('Sunday'),
+    t('Monday'),
+    t('Tuesday'),
+    t('Wednesday'),
+    t('Thursday'),
+    t('Friday'),
+    t('Saturday'),
+  );
+}
